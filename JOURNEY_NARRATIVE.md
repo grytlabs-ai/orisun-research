@@ -2,7 +2,7 @@
 
 **A Builder's Discovery of Decision Intelligence Infrastructure**
 
-*An IP-safe narrative of architectural evolution*
+*A narrative of architectural evolution*
 
 ---
 
