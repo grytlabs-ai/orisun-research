@@ -171,13 +171,13 @@ If you're thinking about substrates, governance-grade AI, authority-anchored rea
 
 ## Contact
 
-[Contact information]
+Gr🚀tLabs-ai™ | Cam Smith, Founder
 
 ---
 
 ## License
 
-This research is published under [appropriate license]. 
+This research is published under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 
 The findings, frameworks, and methodology are shared for discussion and advancement of the field. Implementation details, proprietary schemas, and production systems are not included and remain confidential.
 
