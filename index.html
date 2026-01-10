@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orisun Research — Decision Intelligence Infrastructure</title>
+    <meta name="description" content="Open research on decision intelligence infrastructure. What does it take to build systems that preserve human judgment at scale?">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Orisun Research — Decision Intelligence Infrastructure">
+    <meta property="og:description" content="Open research on infrastructure for human judgment at scale.">
+    <meta property="og:type" content="website">
+    
+    <!-- Analytics placeholder - replace with your tracking code -->
+    <!-- Plausible (privacy-friendly): <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script> -->
+    
+    <style>
+        :root {
+            --bg: #FAFAFA;
+            --text: #2D3142;
+            --accent: #3D5A80;
+            --accent-light: #98C1D9;
+            --warm: #E07A5F;
+            --muted: #8E9AAF;
+            --card-bg: #FFFFFF;
+            --border: #E8E8E8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .hero h1 span {
+            font-weight: 600;
+        }
+        
+        .hero .question {
+            font-size: 1.4rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            max-width: 600px;
+        }
+        
+        /* Navigation Cards */
+        .nav-section {
+            padding: 3rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .nav-section h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+        }
+        
+        .card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(61, 90, 128, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .card p {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+        
+        .card.featured {
+            border-left: 4px solid var(--warm);
+        }
+        
+        .card.featured h3 {
+            color: var(--warm);
+        }
+        
+        /* Interactive Section */
+        .interactive-section {
+            background: var(--accent);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .interactive-section h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        
+        .interactive-section p {
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .viz-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .viz-btn {
+            background: white;
+            color: var(--accent);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .viz-btn:hover {
+            background: var(--accent-light);
+            color: var(--text);
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            padding: 4rem 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .quote-section blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+        
+        .quote-section cite {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero .question {
+                font-size: 1.1rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>What is the <span>AI-native</span> version of this?</h1>
+        <p class="question">The question that changed everything.</p>
+        <p>This is open research on decision intelligence infrastructure—what it takes to build systems that preserve human judgment at scale.</p>
+        <p>Not automation. Not efficiency. <strong>Infrastructure for decisions that matter.</strong></p>
+    </section>
+
+    <section class="nav-section">
+        <h2>Start Here</h2>
+        <div class="card-grid">
+            <a href="human-impact/story.md" class="card featured">
+                <h3>The Human Story</h3>
+                <p>Why this matters. What becomes possible when systems actually see people.</p>
+            </a>
+            <a href="JOURNEY_NARRATIVE.md" class="card">
+                <h3>The Journey</h3>
+                <p>How a six-month transition became a thesis about decision intelligence.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="interactive-section">
+        <h2>See the Architecture</h2>
+        <p>Interactive visualizations of decision intelligence infrastructure.</p>
+        <div class="viz-buttons">
+            <a href="visualizations/architecture-layers.html" class="viz-btn">Five-Layer Architecture</a>
+            <a href="visualizations/decision-landscape.html" class="viz-btn">Market Landscape</a>
+            <a href="https://public.flourish.studio/visualisation/25694650/" class="viz-btn" target="_blank">AI Studio (Prior Work)</a>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <h2>The Thesis</h2>
+        <div class="card-grid">
+            <a href="thesis/decision-intelligence-thesis.md" class="card">
+                <h3>Decision Intelligence</h3>
+                <p>Why decision intelligence is a durable, cross-context value category.</p>
+            </a>
+            <a href="thesis/ai-native-definition.md" class="card">
+                <h3>AI-Native Definition</h3>
+                <p>A structural definition. Five requirements that distinguish AI-native from AI-assisted.</p>
+            </a>
+            <a href="thesis/velocity-thesis.md" class="card">
+                <h3>Velocity Thesis</h3>
+                <p>Why AI-native organizations compound capability faster than incumbents.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <h2>The Gap</h2>
+        <div class="card-grid">
+            <a href="landscape/market-audit.md" class="card">
+                <h3>Market Audit</h3>
+                <p>Who's building what. Where the gaps are. What's missing.</p>
+            </a>
+            <a href="landscape/category-positioning.md" class="card">
+                <h3>Category Positioning</h3>
+                <p>How decision intelligence relates to adjacent categories.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <h2>The Primitives</h2>
+        <div class="card-grid">
+            <a href="primitives/decision-primitive.md" class="card">
+                <h3>Decision</h3>
+                <p>The minimum viable decision record. What must be captured.</p>
+            </a>
+            <a href="primitives/authority-primitive.md" class="card">
+                <h3>Authority</h3>
+                <p>How decisions anchor to sources. The hierarchy that governs.</p>
+            </a>
+            <a href="primitives/context-primitive.md" class="card">
+                <h3>Context</h3>
+                <p>The six dimensions that shape every decision.</p>
+            </a>
+            <a href="primitives/evidence-primitive.md" class="card">
+                <h3>Evidence</h3>
+                <p>The chain from claim to source. What counts as proof.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <h2>The Research</h2>
+        <div class="card-grid">
+            <a href="research/methodology.md" class="card">
+                <h3>Methodology</h3>
+                <p>Why synthetic organizations. How structural research works.</p>
+            </a>
+            <a href="research/synthetic-orgs/org-alpha-stable/README.md" class="card">
+                <h3>Org Alpha: Stable</h3>
+                <p>Baseline archetype. When ontology is fixed and decisions are procedural.</p>
+            </a>
+            <a href="research/synthetic-orgs/org-beta-fluid/README.md" class="card">
+                <h3>Org Beta: Fluid</h3>
+                <p>Strategic fluidity. When definitions drift and context shifts.</p>
+            </a>
+            <a href="research/synthetic-orgs/org-gamma-multi-authority/README.md" class="card">
+                <h3>Org Gamma: Multi-Authority</h3>
+                <p>Complex governance. When authority is contested and overlapping.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <h2>Technical Foundations</h2>
+        <div class="card-grid">
+            <a href="foundations/world-models-and-jepa.md" class="card">
+                <h3>World Models & JEPA</h3>
+                <p>Why representation learning matters for decision intelligence.</p>
+            </a>
+            <a href="prior-work/ai-studio-foundation.md" class="card">
+                <h3>Prior Work: AI Studio</h3>
+                <p>October 2025 research. 97 tools mapped through a governance lens.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <blockquote>"The gap only closes when people operate differently—and tools are the only thing that makes that possible."</blockquote>
+    </section>
+
+    <footer>
+        <p>
+            Research by <a href="https://www.linkedin.com/in/camsmith-cia/" target="_blank">Cam Smith</a> · 
+            <a href="https://github.com/YOUR-USERNAME/orisun-research" target="_blank">View on GitHub</a> · 
+            <a href="README.md">Full README</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            This research is published openly. The methodology is transparent. The implementation is not.
+        </p>
+    </footer>
+
+</body>
+</html>
