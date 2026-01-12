@@ -111,7 +111,7 @@ The underlying Cam's AI Studio Catalog 2025 (Enhanced) contains:
 - Maturity indicators
 - Design heuristic alignment
 
-For access to the underlying data or methodology details, contact: hello@dcsmithadvisory.com
+For access to the underlying data or methodology details, contact: founder@grytlabs.ai
 
 ---
 
