@@ -125,10 +125,6 @@ Anyone could understand the problem from this work. Building the solution requir
       ├── org-beta-fluid/
       └── org-gamma-multi-authority/
 
-/visualizations
-  ├── architecture-layers.html           # Interactive layer diagram
-  └── decision-landscape.html            # Market gap visualization
-
 /foundations
   └── world-models-and-jepa.md           # Technical foundations: representation learning
 
@@ -172,6 +168,7 @@ If you're thinking about substrates, governance-grade AI, authority-anchored rea
 ## Contact
 
 Gr🚀tLabs-ai™ | Cam Smith, Founder
+founder@grytlabs.ai
 
 ---
 
